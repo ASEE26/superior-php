@@ -1,9 +1,9 @@
 <?php
 require "vendor/autoload.php";
 
-use Monero\Wallet;
+use Superior\Wallet;
 
-$wallet = new Monero\Wallet();
+$wallet = new Superior\Wallet();
 
 $destination1 = (object) [
     'amount' => '0.01',

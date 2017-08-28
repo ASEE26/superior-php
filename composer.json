@@ -1,8 +1,8 @@
 {
-    "name": "psychiccat/monero-php",
-    "description": "A PHP library for the Monero simplewallet JSON-RPC interface.",
-    "keywords": ["Monero", "Poloniex", "cryptocurrency", "Shapeshift"],
-    "homepage": "https://github.com/PsychicCat/monero-php",
+    "name": "psychiccat/superior-php",
+    "description": "A PHP library for the Superior simplewallet JSON-RPC interface.",
+    "keywords": ["Superior", "Poloniex", "cryptocurrency", "Shapeshift"],
+    "homepage": "https://github.com/PsychicCat/superior-php",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,6 +15,6 @@
         "graze/guzzle-jsonrpc": "^3.2"
     },
     "autoload": {
-        "psr-4": {"Monero\\":"src/"}
+        "psr-4": {"Superior\\":"src/"}
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Monero;
+namespace Superior;
 
 use Graze\GuzzleHttp\JsonRpc\Client;
 
@@ -46,7 +46,7 @@ class Wallet
     public function _buildTransfer($options)
     {
         $destinations = $options['destinations'];
-        // Convert Monero amount to atomic units
+        // Convert Superior amount to atomic units
         if(gettype($destinations) == "object"){
             $destinations->amount = $destinations->amount * 1e12;
             $destinations = array($destinations);
@@ -112,7 +112,7 @@ class Wallet
     }
 
     /**
-     * Transfer Monero to a single recipient or group of recipients
+     * Transfer Superior to a single recipient or group of recipients
      * @param array $options
      * @return string
      */

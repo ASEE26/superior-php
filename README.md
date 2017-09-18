@@ -23,7 +23,7 @@ use Superior\Wallet;
 $wallet = new Superior\Wallet();
 ```
 
-Default hostname and port connects to http://127.0.0.1:18082.
+Default hostname and port connects to http://127.0.0.1:16035.
 
 To connect to an external IP or different port:
 
@@ -41,7 +41,7 @@ $wallet = new Superior\Wallet($hostname, $port);
 $balance = $wallet->getBalance();
 ```
 
-Responds with the current balance and unlocked (spendable) balance of the wallet in atomic units. Divide by 1e12 to convert.
+Responds with the current balance and unlocked (spendable) balance of the wallet in atomic units. Divide by 1e8 to convert.
     
 Example response: 
 

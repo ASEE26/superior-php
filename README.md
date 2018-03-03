@@ -12,7 +12,7 @@ SUP: `﻿5QaiHzo64sLDo42ky98uXtJ3zswCdpUrk1q5nSidtqovjjiC7FmxRt84Zu3HkpYQX1PLDU7
 
 Install the library using Composer.
     
-    composer require psychiccat/superior-php
+    composer require TheSuperiorCoin/superior-php
 
 ## Create an Instance of the Wallet
 

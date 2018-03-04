@@ -16,9 +16,5 @@
     },
     "autoload": {
         "psr-4": {"Superior\\":"src/"}
-        
-    },
-    {
-         "version": "1.0.0"
     }
 }

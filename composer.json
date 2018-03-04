@@ -1,6 +1,5 @@
 {
     "name": "thesuperiorcoin/superior-php",
-    "version": "v1.1",
     "description": "A PHP library for the Superior simplewallet JSON-RPC interface.",
     "keywords": ["Superior", "Poloniex", "cryptocurrency", "Shapeshift"],
     "homepage": "https://github.com/TheSuperiorCoin/superior-php",

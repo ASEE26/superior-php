@@ -11,7 +11,7 @@ class Wallet
      * @param string $hostname
      * @param int $port
      */
-    function __construct($hostname = 'http://127.0.0.1', $port = 16035)
+    function __construct($hostname = 'http://127.0.0.1', $port = 16036)
     {
         $url = $hostname.':'.$port .'/json_rpc';
         $this->client = Client::factory($url);

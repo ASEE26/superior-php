@@ -23,7 +23,7 @@ use Superior\Wallet;
 $wallet = new Superior\Wallet();
 ```
 
-Default hostname and port connects to http://127.0.0.1:16035.
+Default hostname and port connects to http://127.0.0.1:16036.
 
 To connect to an external IP or different port:
 
@@ -368,7 +368,7 @@ Outputs:
 
 Example (In this example, sweep_dust returns an error due to insufficient funds to sweep):
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"sweep_dust"}' -H 'Content-Type: application/json' { "error": { "code": -4, "message": "not enough money" }, "id": "0", "jsonrpc": "2.0" }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"sweep_dust"}' -H 'Content-Type: application/json' { "error": { "code": -4, "message": "not enough money" }, "id": "0", "jsonrpc": "2.0" }
 store
 ```
 Save the blockchain.
@@ -377,7 +377,7 @@ Outputs: None.
 
 Example:
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"store"}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"store"}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { } }
 get_payments
 ```
 Get a list of incoming payments using a given payment id.
@@ -394,7 +394,7 @@ Outputs:
 
 Example:
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_payments","params":{"payment_id":"4279257e0a20608e25dba8744949c9e1caff4fcdafc7d5362ecf14225f3d9030"}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "payments": [{ "amount": 10350000000000, "block_height": 994327, "payment_id": "4279257e0a20608e25dba8744949c9e1caff4fcdafc7d5362ecf14225f3d9030", "tx_hash": "c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1", "unlock_time": 0 }] } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_payments","params":{"payment_id":"4279257e0a20608e25dba8744949c9e1caff4fcdafc7d5362ecf14225f3d9030"}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "payments": [{ "amount": 10350000000000, "block_height": 994327, "payment_id": "4279257e0a20608e25dba8744949c9e1caff4fcdafc7d5362ecf14225f3d9030", "tx_hash": "c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1", "unlock_time": 0 }] } }
 get_bulk_payments
 ```
 Get a list of incoming payments using a given payment id, or a list of payments ids, from a given height. This method is the preferred method over get_payments because it has the same functionality but is more extendable. Either is fine for looking up transactions by a single payment ID.
@@ -412,7 +412,7 @@ Outputs:
 
 Example:
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_bulk_payments","params":{"payment_ids":["4279257e0a20608e25dba8744949c9e1caff4fcdafc7d5362ecf14225f3d9030"],"min_block_height":990000}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "payments": [{ "amount": 10350000000000, "block_height": 994327, "payment_id": "4279257e0a20608e25dba8744949c9e1caff4fcdafc7d5362ecf14225f3d9030", "tx_hash": "c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1", "unlock_time": 0 }] } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_bulk_payments","params":{"payment_ids":["4279257e0a20608e25dba8744949c9e1caff4fcdafc7d5362ecf14225f3d9030"],"min_block_height":990000}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "payments": [{ "amount": 10350000000000, "block_height": 994327, "payment_id": "4279257e0a20608e25dba8744949c9e1caff4fcdafc7d5362ecf14225f3d9030", "tx_hash": "c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1", "unlock_time": 0 }] } }
 get_transfers
 ```
 Returns a list of transfers.

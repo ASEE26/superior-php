@@ -60,7 +60,7 @@ Responds with the Superior address of the wallet.
 Example response:
 
 ```
-{ address: '47Vmj6BXSRPax69cVdqVP5APVLkcxxjjXdcP9fJWZdNc5mEpn3fXQY1CFmJDvyUXzj2Fy9XafvUgMbW91ZoqwqmQ6RjbVtp' }
+{ address: '5QaiHzo64sLDo42ky98uXtJ3zswCdpUrk1q5nSidtqovjjiC7FmxRt84Zu3HkpYQX1PLDU72aQMK6Cif4muRxwt3RyZXY6y' }
 ```
 
 ### transfer
@@ -79,7 +79,7 @@ Parameters:
 $options = [
     'destinations' => (object) [
         'amount' => '1',
-        'address' => '47Vmj6BXSRPax69cVdqVP5APVLkcxxjjXdcP9fJWZdNc5mEpn3fXQY1CFmJDvyUXzj2Fy9XafvUgMbW91ZoqwqmQ6RjbVtp'
+        'address' => '5QaiHzo64sLDo42ky98uXtJ3zswCdpUrk1q5nSidtqovjjiC7FmxRt84Zu3HkpYQX1PLDU72aQMK6Cif4muRxwt3RyZXY6y'
     ]
 ];
 ```
@@ -87,7 +87,7 @@ $options = [
 Example response:
 
 ```
-{ tx_hash: '<b9272a68b0f242769baa1ac2f723b826a7efdc5ba0c71a2feff4f292967936d8>', tx_key: '' }
+{ tx_hash: '<a38140b8a6cfd0c8de6b7fe8f83fb2f5ae0f0eec50f6221fefc871649e7b3c68>', tx_key: '' }
 ```
 
 ### transferSplit
@@ -105,7 +105,7 @@ Additional property available for the `options` array:
 Example response:
 
 ```
-{ tx_hash_list: [ '<f17fb226ebfdf784a0f5814e1c5bb78c19ea26930a0d706c9dc1085a250ceb37>' ] }
+{ tx_hash_list: [ '<a38140b8a6cfd0c8de6b7fe8f83fb2f5ae0f0eec50f6221fefc871649e7b3c68>' ] }
 ```
 
 ### sweepDust
@@ -119,7 +119,7 @@ Sends all dust outputs back to the wallet, to make funds easier to spend and mix
 Example response:
 
 ```
-{ tx_hash_list: [ '<75c666fc96120a643321a5e76c0376b40761582ee40cc4917e8d1379a2c8ad9f>' ] }
+{ tx_hash_list: [ '<a38140b8a6cfd0c8de6b7fe8f83fb2f5ae0f0eec50f6221fefc871649e7b3c68>' ] }
 ```
 
 ### getPayments
@@ -186,7 +186,7 @@ Parameters:
 Example response:
 
 ```
-{ integrated_address: '4HCSju123guax69cVdqVP5APVLkcxxjjXdcP9fJWZdNc5mEpn3fXQY1CFmJDvyUXzj2Fy9XafvUgMbW91ZoqwqmQ96NYBVqEd6JAu9j3gk' }
+{ integrated_address: '5QaiHzo64sLDo42ky98uXtJ3zswCdpUrk1q5nSidtqovjjiC7FmxRt84Zu3HkpYQX1PLDU72aQMK6Cif4muRxwt3RyZXY6y' }
 ```
 
 ### splitIntegrated
@@ -205,7 +205,7 @@ Example response:
 
 ```
 { payment_id: '<61eec5ffd3b9cb57>',
-  standard_address: '47Vmj6BXSRPax69cVdqVP5APVLkcxxjjXdcP9fJWZdNc5mEpn3fXQY1CFmJDvyUXzj2Fy9XafvUgMbW91ZoqwqmQ6RjbVtp' }
+  standard_address: '5QaiHzo64sLDo42ky98uXtJ3zswCdpUrk1q5nSidtqovjjiC7FmxRt84Zu3HkpYQX1PLDU72aQMK6Cif4muRxwt3RyZXY6y' }
 ```
 
 ### getHeight 
@@ -304,7 +304,7 @@ Outputs:
 
 Example:
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"getaddress"}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "address": "427ZuEhNJQRXoyJAeEoBaNW56ScQaLXyyQWgxeRL9KgAUhVzkvfiELZV7fCPBuuB2CGuJiWFQjhnhhwiH1FsHYGQGaDsaBA" } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"getaddress"}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "address": "5QaiHzo64sLDo42ky98uXtJ3zswCdpUrk1q5nSidtqovjjiC7FmxRt84Zu3HkpYQX1PLDU72aQMK6Cif4muRxwt3RyZXY6y" } }
 getheight
 ```
 
@@ -335,7 +335,7 @@ Inputs:
 
 Example:
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"transfer","params":{"destinations":[{"amount":100000000,"address":"9wNgSYy2F9qPZu7KBjvsFgZLTKE2TZgEpNFbGka9gA5zPmAXS35QzzYaLKJRkYTnzgArGNX7TvSqZC87tBLwtaC5RQgJ8rm"},{"amount":200000000,"address":"9vH5D7Fv47mbpCpdcthcjU34rqiiAYRCh1tYywmhqnEk9iwCE9yppgNCXAyVHG5qJt2kExa42TuhzQfJbmbpeGLkVbg8xit"}],"mixin":4,"get_tx_key": true}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "fee": 48958481211, "tx_hash": "985180f468637bc6d2f72ee054e1e34b8d5097988bb29a2e0cb763e4464db23c", "tx_key": "8d62e5637f1fcc9a8904057d6bed6c697618507b193e956f77c31ce662b2ee07" } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"transfer","params":{"destinations":[{"amount":100000000,"address":"5QaiHzo64sLDo42ky98uXtJ3zswCdpUrk1q5nSidtqovjjiC7FmxRt84Zu3HkpYQX1PLDU72aQMK6Cif4muRxwt3RyZXY6y"},{"amount":200000000,"address":"5QaiHzo64sLDo42ky98uXtJ3zswCdpUrk1q5nSidtqovjjiC7FmxRt84Zu3HkpYQX1PLDU72aQMK6Cif4muRxwt3RyZXY6y"}],"mixin":4,"get_tx_key": true}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "fee": 48958481211, "tx_hash": "a38140b8a6cfd0c8de6b7fe8f83fb2f5ae0f0eec50f6221fefc871649e7b3c68", "tx_key": "a38140b8a6cfd0c8de6b7fe8f83fb2f5ae0f0eec50f6221fefc871649e7b3c68" } }
 transfer_split
 ```
 Same as transfer, but can split into more than one tx if necessary.
@@ -461,15 +461,15 @@ Outputs:
 
 Example (Return "all" transaction types):
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"incoming_transfers","params":{"transfer_type":"all"}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "transfers": [{ "amount": 10000000000000, "global_index": 711506, "spent": false, "tx_hash": "<c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1>", "tx_size": 5870 },{ "amount": 300000000000, "global_index": 794232, "spent": false, "tx_hash": "<c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1>", "tx_size": 5870 },{ "amount": 50000000000, "global_index": 213659, "spent": false, "tx_hash": "<c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1>", "tx_size": 5870 }] } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"incoming_transfers","params":{"transfer_type":"all"}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "transfers": [{ "amount": 10000000000000, "global_index": 711506, "spent": false, "tx_hash": "<c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1>", "tx_size": 5870 },{ "amount": 300000000000, "global_index": 794232, "spent": false, "tx_hash": "<c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1>", "tx_size": 5870 },{ "amount": 50000000000, "global_index": 213659, "spent": false, "tx_hash": "<c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1>", "tx_size": 5870 }] } }
 ```
 Example (Return "available" transactions):
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"incoming_transfers","params":{"transfer_type":"available"}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "transfers": [{ "amount": 10000000000000, "global_index": 711506, "spent": false, "tx_hash": "<c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1>", "tx_size": 5870 },{ "amount": 300000000000, "global_index": 794232, "spent": false, "tx_hash": "<c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1>", "tx_size": 5870 },{ "amount": 50000000000, "global_index": 213659, "spent": false, "tx_hash": "<c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1>", "tx_size": 5870 }] } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"incoming_transfers","params":{"transfer_type":"available"}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "transfers": [{ "amount": 10000000000000, "global_index": 711506, "spent": false, "tx_hash": "<c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1>", "tx_size": 5870 },{ "amount": 300000000000, "global_index": 794232, "spent": false, "tx_hash": "<c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1>", "tx_size": 5870 },{ "amount": 50000000000, "global_index": 213659, "spent": false, "tx_hash": "<c391089f5b1b02067acc15294e3629a463412af1f1ed0f354113dd4467e4f6c1>", "tx_size": 5870 }] } }
 ```
 Example (Return "unavailable" transaction. Note that this particular example returns 0 unavailable transactions):
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"incoming_transfers","params":{"transfer_type":"unavailable"}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"incoming_transfers","params":{"transfer_type":"unavailable"}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { } }
 query_key
 ```
 Return the spend or view private key.
@@ -480,11 +480,11 @@ Outputs:
 
 Example (Query view key):
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"query_key","params":{"key_type":"view_key"}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "key": "7e341d…" } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"query_key","params":{"key_type":"view_key"}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "key": "7e341d…" } }
 ```
 Example (Query mnemonic key):
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"query_key","params":{"key_type":"mnemonic"}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "key": "adapt adapt nostril …" } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"query_key","params":{"key_type":"mnemonic"}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "key": "adapt adapt nostril …" } }
 make_integrated_address
 ```
 Make an integrated address from the wallet address and a payment id.
@@ -496,7 +496,7 @@ Outputs:
 
 Example (Payment ID is empty, use a random ID):
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"make_integrated_address","params":{"payment_id":""}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "integrated_address": "5BpEv3WrufwXoyJAeEoBaNW56ScQaLXyyQWgxeRL9KgAUhVzkvfiELZV7fCPBuuB2CGuJiWFQjhnhhwiH1FsHYGQQ8H2RRJveAtUeiFs6J" } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"make_integrated_address","params":{"payment_id":""}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "integrated_address": "5BpEv3WrufwXoyJAeEoBaNW56ScQaLXyyQWgxeRL9KgAUhVzkvfiELZV7fCPBuuB2CGuJiWFQjhnhhwiH1FsHYGQQ8H2RRJveAtUeiFs6J" } }
 split_integrated_address
 ```
 Retrieve the standard address and payment id corresponding to an integrated address.
@@ -509,7 +509,7 @@ Outputs:
 
 Example:
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"split_integrated_address","params":{"integrated_address": "5BpEv3WrufwXoyJAeEoBaNW56ScQaLXyyQWgxeRL9KgAUhVzkvfiELZV7fCPBuuB2CGuJiWFQjhnhhwiH1FsHYGQQ8H2RRJveAtUeiFs6J"}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "payment_id": "<420fa29b2d9a49f5>", "standard_address": "527ZuEhNJQRXoyJAeEoBaNW56ScQaLXyyQWgxeRL9KgAUhVzkvfiELZV7fCPBuuB2CGuJiWFQjhnhhwiH1FsHYGQGaDsaBA" } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"split_integrated_address","params":{"integrated_address": "5BpEv3WrufwXoyJAeEoBaNW56ScQaLXyyQWgxeRL9KgAUhVzkvfiELZV7fCPBuuB2CGuJiWFQjhnhhwiH1FsHYGQQ8H2RRJveAtUeiFs6J"}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "payment_id": "<420fa29b2d9a49f5>", "standard_address": "527ZuEhNJQRXoyJAeEoBaNW56ScQaLXyyQWgxeRL9KgAUhVzkvfiELZV7fCPBuuB2CGuJiWFQjhnhhwiH1FsHYGQGaDsaBA" } }
 stop_wallet
 ```
 Stops the wallet, storing the current state.
@@ -519,7 +519,7 @@ Outputs: None.
 
 Example:
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"stop_wallet"}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"stop_wallet"}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { } }
 make_uri
 ```
 Create a payment URI using the official URI spec.
@@ -535,7 +535,7 @@ Outputs:
 
 Example:
 ```
-[ superior->~ ]$curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"make_uri","params":{"address":"54AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A","amount":10,"payment_id":"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef","tx_description":"Testing out the make_uri function.","recipient_name":"Superior Project donation address"}}' -H 'Content-Type: application/json' { "id": 0, "jsonrpc": "2.0", "result": { "uri": "superior:54AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A?tx_payment_id=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef&tx_amount=0.000000000010&recipient_name=Superior%20Project%20donation%20address&tx_description=Testing%20out%20the%20make_uri%20function." } }
+[ superior->~ ]$curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"make_uri","params":{"address":"54AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A","amount":10,"payment_id":"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef","tx_description":"Testing out the make_uri function.","recipient_name":"Superior Project donation address"}}' -H 'Content-Type: application/json' { "id": 0, "jsonrpc": "2.0", "result": { "uri": "superior:54AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A?tx_payment_id=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef&tx_amount=0.000000000010&recipient_name=Superior%20Project%20donation%20address&tx_description=Testing%20out%20the%20make_uri%20function." } }
 parse_uri
 ```
 Parse a payment URI to get payment information.
@@ -552,5 +552,5 @@ Outputs:
 
 Example:
 ```
-[ superior->~ ]$curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"parse_uri","params":{"uri":"superior:44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A?tx_payment_id=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef&tx_amount=0.000000000010&recipient_name=Superior%20Project%20donation%20address&tx_description=Testing%20out%20the%20make_uri%20function."}}' -H 'Content-Type: application/json' { "id": 0, "jsonrpc": "2.0", "result": { "uri": { "address": "54AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A", "amount": 10, "payment_id": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef", "recipient_name": "Superior Project donation address", "tx_description": "Testing out the make_uri function." } } }
+[ superior->~ ]$curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"parse_uri","params":{"uri":"superior:44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A?tx_payment_id=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef&tx_amount=0.000000000010&recipient_name=Superior%20Project%20donation%20address&tx_description=Testing%20out%20the%20make_uri%20function."}}' -H 'Content-Type: application/json' { "id": 0, "jsonrpc": "2.0", "result": { "uri": { "address": "54AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A", "amount": 10, "payment_id": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef", "recipient_name": "Superior Project donation address", "tx_description": "Testing out the make_uri function." } } }
 ```

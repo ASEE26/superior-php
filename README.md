@@ -239,7 +239,7 @@ This is a list of the superior-wallet-rpc calls, their inputs and outputs, and e
 All superior-wallet-rpc methods use the same JSON RPC interface. For example:
 ```
 IP=127.0.0.1
-PORT=16035
+PORT=16036
 METHOD="make_integrated_address"
 PARAMS="{\"payment_id\":\"1234567890123456789012345678900012345678901234567890123456789000\"}"
 curl \
@@ -252,7 +252,7 @@ If the superior-wallet-rpc was executed with the --rpc-login argument as user
 
 ```
 IP=127.0.0.1
-PORT=16035
+PORT=16036
 METHOD="make_integrated_address"
 PARAMS="{\"payment_id\":\"1234567890123456789012345678900012345678901234567890123456789000\"}"
 curl \
@@ -293,7 +293,7 @@ Outputs:
 
 Example:
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"getbalance"}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "balance": 140000000000, "unlocked_balance": 50000000000 } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"getbalance"}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "balance": 140000000000, "unlocked_balance": 50000000000 } }
 getaddress
 ```
 Return the wallet's address.
@@ -304,7 +304,7 @@ Outputs:
 
 Example:
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"getaddress"}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "address": "5QaiHzo64sLDo42ky98uXtJ3zswCdpUrk1q5nSidtqovjjiC7FmxRt84Zu3HkpYQX1PLDU72aQMK6Cif4muRxwt3RyZXY6y" } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"getaddress"}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "address": "5QaiHzo64sLDo42ky98uXtJ3zswCdpUrk1q5nSidtqovjjiC7FmxRt84Zu3HkpYQX1PLDU72aQMK6Cif4muRxwt3RyZXY6y" } }
 getheight
 ```
 
@@ -315,7 +315,7 @@ Outputs:
 
 Example:
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"getheight"}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "height": 994310 } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"getheight"}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "height": 994310 } }
 transfer
 ```
 Send superior to a number of recipients.
@@ -335,7 +335,7 @@ Inputs:
 
 Example:
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"transfer","params":{"destinations":[{"amount":100000000,"address":"5QaiHzo64sLDo42ky98uXtJ3zswCdpUrk1q5nSidtqovjjiC7FmxRt84Zu3HkpYQX1PLDU72aQMK6Cif4muRxwt3RyZXY6y"},{"amount":200000000,"address":"5QaiHzo64sLDo42ky98uXtJ3zswCdpUrk1q5nSidtqovjjiC7FmxRt84Zu3HkpYQX1PLDU72aQMK6Cif4muRxwt3RyZXY6y"}],"mixin":4,"get_tx_key": true}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "fee": 48958481211, "tx_hash": "a38140b8a6cfd0c8de6b7fe8f83fb2f5ae0f0eec50f6221fefc871649e7b3c68", "tx_key": "a38140b8a6cfd0c8de6b7fe8f83fb2f5ae0f0eec50f6221fefc871649e7b3c68" } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"transfer","params":{"destinations":[{"amount":100000000,"address":"5QaiHzo64sLDo42ky98uXtJ3zswCdpUrk1q5nSidtqovjjiC7FmxRt84Zu3HkpYQX1PLDU72aQMK6Cif4muRxwt3RyZXY6y"},{"amount":200000000,"address":"5QaiHzo64sLDo42ky98uXtJ3zswCdpUrk1q5nSidtqovjjiC7FmxRt84Zu3HkpYQX1PLDU72aQMK6Cif4muRxwt3RyZXY6y"}],"mixin":4,"get_tx_key": true}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "fee": 48958481211, "tx_hash": "a38140b8a6cfd0c8de6b7fe8f83fb2f5ae0f0eec50f6221fefc871649e7b3c68", "tx_key": "a38140b8a6cfd0c8de6b7fe8f83fb2f5ae0f0eec50f6221fefc871649e7b3c68" } }
 transfer_split
 ```
 Same as transfer, but can split into more than one tx if necessary.
@@ -357,7 +357,7 @@ Outputs:
 
 Example:
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"transfer_split","params":{"destinations":[{"amount":100000000,"address":"5wNgSYy2F9qPZu7KBjvsFgZLTKE2TZgEpNFbGka9gA5zPmAXS35QzzYaLKJRkYTnzgArGNX7TvSqZC87tBwtaC5RQgJ8rm"},{"amount":200000000,"address":"5vH5D7Fv47mbpCpdcthcjU34rqiiAYRCh1tYywmhqnEk9iwCE9yppgNCXAyVHG5qJt2kExa42TuhzQfJbmbpeGLkVbg8xit"},{"amount":200000000,"address":"5vC5Q25cR1d3WzKX6dpTaLJaqZyDrtTnfadTmVuB1Wue2tyFGxUhiE4RGa74pEDJv7gSySzcd1Ao6G1nzSaqp78vLfP6MPj"},{"amount":200000000,"address":"52MSrn49ziBPJBh8ZNEhhbfyLMou6mao4C1F5TLGUatmUnCxZArDYkcbAnVkVEopWVeak2rKDrmc8JpoS7n5dvfN9YDPBTG"},{"amount":200000000,"address":"5tEDyVQ8zgRQbDYiykTdpw5kZ6qWQWcKfExEj9eQshjpGb3sdr3UyWE2AHWzUGzJjaH9HN1DdGBdyQQ4AqGMc7rr5xYwZWW"}],"mixin":4,"get_tx_key": true, "new_algorithm": true}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "fee_list": [97916962422], "tx_hash_list": ["c5c389846e701c27aaf1f7ab8b9dc457b471fcea5bc9710e8020d51275afbc54"] } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"transfer_split","params":{"destinations":[{"amount":100000000,"address":"5wNgSYy2F9qPZu7KBjvsFgZLTKE2TZgEpNFbGka9gA5zPmAXS35QzzYaLKJRkYTnzgArGNX7TvSqZC87tBwtaC5RQgJ8rm"},{"amount":200000000,"address":"5vH5D7Fv47mbpCpdcthcjU34rqiiAYRCh1tYywmhqnEk9iwCE9yppgNCXAyVHG5qJt2kExa42TuhzQfJbmbpeGLkVbg8xit"},{"amount":200000000,"address":"5vC5Q25cR1d3WzKX6dpTaLJaqZyDrtTnfadTmVuB1Wue2tyFGxUhiE4RGa74pEDJv7gSySzcd1Ao6G1nzSaqp78vLfP6MPj"},{"amount":200000000,"address":"52MSrn49ziBPJBh8ZNEhhbfyLMou6mao4C1F5TLGUatmUnCxZArDYkcbAnVkVEopWVeak2rKDrmc8JpoS7n5dvfN9YDPBTG"},{"amount":200000000,"address":"5tEDyVQ8zgRQbDYiykTdpw5kZ6qWQWcKfExEj9eQshjpGb3sdr3UyWE2AHWzUGzJjaH9HN1DdGBdyQQ4AqGMc7rr5xYwZWW"}],"mixin":4,"get_tx_key": true, "new_algorithm": true}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "fee_list": [97916962422], "tx_hash_list": ["c5c389846e701c27aaf1f7ab8b9dc457b471fcea5bc9710e8020d51275afbc54"] } }
 sweep_dust
 ```
 Send all dust outputs back to the wallet's, to make them easier to spend (and mix).
@@ -444,7 +444,7 @@ Outputs:
 
 Example:
 ```
-[ superior->~ ]$ curl -X POST http://127.0.0.1:16035/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_transfers","params":{"pool":true}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "pool": [{ "amount": 500000000000, "fee": 0, "height": 0, "note": "", "payment_id": "758d9b225fda7b7f", "timestamp": 1488312467, "txid": "da7301d5423efa09fabacb720002e978d114ff2db6a1546f8b820644a1b96208", "type": "pool" }] } }
+[ superior->~ ]$ curl -X POST http://127.0.0.1:16036/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_transfers","params":{"pool":true}}' -H 'Content-Type: application/json' { "id": "0", "jsonrpc": "2.0", "result": { "pool": [{ "amount": 500000000000, "fee": 0, "height": 0, "note": "", "payment_id": "758d9b225fda7b7f", "timestamp": 1488312467, "txid": "da7301d5423efa09fabacb720002e978d114ff2db6a1546f8b820644a1b96208", "type": "pool" }] } }
 incoming_transfers
 ```
 Return a list of incoming transfers to the wallet.

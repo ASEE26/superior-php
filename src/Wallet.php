@@ -91,7 +91,17 @@ class Wallet
         $balance = $this->_request($body);
         return $balance;
     }
-
+    /* Return total balance 
+     @ return numeric*/
+     public function getRealBalance(){
+        $balance = $this->getBalance();
+        $getfaucetbal = json_decode($balance);
+        $realBalance = number_format($getfaucetbal->{'balance'}/100000000);
+        $realBalance = number_format($realBalance, 2, '.', '');
+        return $realBalance;
+    }
+    
+    
     /**
      * Return the address of the wallet
      */
